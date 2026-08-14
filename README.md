@@ -1,16 +1,31 @@
-## Hi there 👋
+<div align="center">"hello, world!" ♡
 
-<!--
-**corerudo/corerudo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+программирование • проекты • идеи
 
-Here are some ideas to get you started:
+Люблю создавать что-то своё и превращать идеи в код.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br>" "GitHub" " (https://github.com/YOUR_USERNAME)
+·
+" "Telegram" " (https://t.me/YOUR_USERNAME)
+·
+" "Discord" " (https://discord.com/users/YOUR_ID)
+
+<br><br>
+
+╭──────────────────────────────────────────╮
+│                                          │
+│          code what you want.             │
+│          build what you imagine.         │
+│                                          │
+╰──────────────────────────────────────────╯
+
+<br>"♡"
+
+«Иногда достаточно просто открыть редактор
+и начать что-нибудь создавать.»
+
+<br>---
+
+"made with <3 and a lot of code"
+
+</div>
