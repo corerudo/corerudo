@@ -6,7 +6,7 @@
 
 [Telegram](https://t.me/jaxbastard) • [сайт(потом доделаю (наверное))](https://links.larten.ru)
 
-<br> «nen nbgj evyfz wbnfnf» <br>
+«nen nbgj evyfz wbnfnf»
 
 ---
 
