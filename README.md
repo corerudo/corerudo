@@ -4,7 +4,7 @@
 
 я короче программист, да, вот (нет), и еще я хлеп
 
-[![Telegram](https://img.shields.io/badge/тгшка-лс-blueviolet)](https://t.me/jaxbastard) • [![сайт(потом доделаю (наверное))](https://img.shields.io/badge/сайт(потом доделаю)-(наверное)-blueviolet)](https://links.larten.ru)
+[![Telegram](https://img.shields.io/badge/тгшка-лс-blueviolet)](https://t.me/jaxbastard) • [![сайт(потом доделаю (наверное))](https://img.shields.io/badge/сайт-херня-blueviolet)](https://links.larten.ru)
 
 «nen nbgj evyfz wbnfnf»
 
