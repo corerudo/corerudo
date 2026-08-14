@@ -8,6 +8,8 @@
 
 «nen nbgj evyfz wbnfnf»
 
+![просмотры](https://komarev.com/ghpvc/?username=corerudo&color=blueviolet&style=flat-square)
+
 ---
 
 грибы♡
