@@ -1,31 +1,14 @@
-<div align="center">"hello, world!" ♡
+<div align="center">а ты умный или тупой?
 
-программирование • проекты • идеи
+bwa • bwa • bwa
 
-Люблю создавать что-то своё и превращать идеи в код.
+я короче программист, да, вот (нет), и еще я хлеп
+<br> [Telegram](https://t.me/jaxbastard) • [сайт(потом доделаю (наверное))](https://links.larten.ru) <br><br>
 
-<br>" "GitHub" " (https://github.com/YOUR_USERNAME)
-·
-" "Telegram" " (https://t.me/YOUR_USERNAME)
-·
-" "Discord" " (https://discord.com/users/YOUR_ID)
-
-<br><br>
-
-╭──────────────────────────────────────────╮
-│                                          │
-│          code what you want.             │
-│          build what you imagine.         │
-│                                          │
-╰──────────────────────────────────────────╯
-
-<br>"♡"
-
-«Иногда достаточно просто открыть редактор
-и начать что-нибудь создавать.»
+«nen nbgj evyfz wbnfnf»
 
 <br>---
 
-"made with <3 and a lot of code"
+грибы♡
 
 </div>
