@@ -23,15 +23,15 @@ bwa • bwa • bwa
 
 <br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=corerudo&theme=midnight-purple&hide_border=true&date_format=j%20M%5B%20Y%5D&locale=ru">
+<img src="https://github-readme-streak-stats.herokuapp.com?user=corerudo&background=0D1117&border=0D1117&stroke=30363D&ring=9745F5&fire=9F4BFF&currStreakNum=9745F5&sideNums=C3D1D9&currStreakLabel=9745F5&sideLabels=C3D1D9&dates=8B949E&hide_border=true&date_format=j%20M%5B%20Y%5D&locale=ru">
 
 <br>
 
-<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=corerudo&layout=compact&title_color=9745f5&text_color=C3D1D9&bg_color=0D1117&hide_border=true&locale=ru">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=corerudo&layout=compact&title_color=9745f5&text_color=C3D1D9&bg_color=0D1117&hide_border=true&locale=ru">
 
 <br><br>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=corerudo&theme=discord&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=corerudo&theme=midnight-purple&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 <br>
 
