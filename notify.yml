@@ -1,0 +1,26 @@
+name: Notify
+
+on:
+  push:
+  create:
+  delete:
+  watch:
+  fork:
+  issues:
+    types: [opened, closed, reopened]
+  pull_request:
+    types: [opened, closed, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send notification
+        run: |
+          curl -X POST https://corerudo.larten.ru/webhook \
+            -H "Content-Type: application/json" \
+            -d '{
+              "chat_id": "${{ secrets.NOTIFY_CHAT_ID }}",
+              "thread_id": "${{ secrets.NOTIFY_THREAD_ID }}",
+              "text": "*🚀 ${{ github.event_name }}* in `${{ github.repository }}`\n\n${{ github.event.head_commit.message || github.event.issue.title || github.event.pull_request.title || github.event.release.name || '' }}\n\n[View on GitHub](${{ github.event.head_commit.url || github.event.issue.html_url || github.event.pull_request.html_url || github.event.release.html_url || github.event.repository.html_url }})"
+            }'
