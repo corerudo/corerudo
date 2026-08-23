@@ -11,7 +11,7 @@
 ![просмотры](https://komarev.com/ghpvc/?username=corerudo&color=blueviolet&style=flat-square)
 
 <p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=corerudo&theme=midnight-purple&show_icons=true&hide_border=true&count_private=true&locale=ru">
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=corerudo&title_color=9745f5&icon_color=9f4bff&text_color=C3D1D9&bg_color=0D1117&show_icons=true&hide_border=true&count_private=true&locale=ru">
 </p>
 
 ---
