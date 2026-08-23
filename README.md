@@ -1,16 +1,41 @@
-<div align="center">а ты умный или тупой?
+<div align="center">
 
-<br> bwa • bwa • bwa <br>
+# 🐉 corerudo
+
+<br>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=9745F5&center=true&vCenter=true&width=435&lines=python+%7C+chaquopy+%7C+exteragram;plugin+dev+%7C+anime+%7C+grzyby;nen+nbgj+evyfz+wbnfnf)](https://git.io/typing-svg)
+
+<br>
+
+bwa • bwa • bwa
 
 я короче программист, да, вот (нет), и еще я хлеп
 
-[![Telegram](https://img.shields.io/badge/тгшка-лс-blueviolet)](https://t.me/jaxbastard) [![сайт(потом доделаю (наверное))](https://img.shields.io/badge/сайт-херня-blueviolet)](https://links.larten.ru)
+<br>
 
-«nen nbgj evyfz wbnfnf»
+<a href="https://t.me/jaxbastard"><img src="https://img.shields.io/badge/Telegram-9745F5?style=for-the-badge&logo=telegram&logoColor=white"></a>
+<a href="https://links.larten.ru"><img src="https://img.shields.io/badge/Links-9F4BFF?style=for-the-badge&logo=link&logoColor=white"></a>
 
-<p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=corerudo&title_color=9745f5&icon_color=9f4bff&text_color=C3D1D9&bg_color=0D1117&show_icons=true&hide_border=true&count_private=true&locale=ru">
-</p>
+<br><br>
+
+<img src="https://github-readme-stats-fast.vercel.app/api?username=corerudo&title_color=9745f5&icon_color=9f4bff&text_color=C3D1D9&bg_color=0D1117&show_icons=true&hide_border=true&count_private=true&locale=ru">
+
+<br>
+
+<img src="https://github-readme-streak-stats.herokuapp.com?user=corerudo&theme=midnight-purple&hide_border=true&date_format=j%20M%5B%20Y%5D&locale=ru">
+
+<br>
+
+<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=corerudo&layout=compact&title_color=9745f5&text_color=C3D1D9&bg_color=0D1117&hide_border=true&locale=ru">
+
+<br><br>
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=corerudo&theme=discord&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+
+<br>
+
+![Snake animation](https://github.com/corerudo/corerudo/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
