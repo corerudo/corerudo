@@ -29,13 +29,7 @@ bwa • bwa • bwa
 
 <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=corerudo&layout=compact&title_color=9745f5&text_color=C3D1D9&bg_color=0D1117&hide_border=true&locale=ru">
 
-<br><br>
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=corerudo&theme=discord&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
-
 <br>
-
-![Snake animation](https://github.com/corerudo/corerudo/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
