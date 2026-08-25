@@ -1,7 +1,6 @@
 name: Notify
 
 on:
-  workflow_dispatch: 
   push:
   create:
   delete:
@@ -17,8 +16,6 @@ on:
     types: [published, created, edited, deleted, prereleased]
   discussion:
     types: [created, edited, deleted, answered]
-  workflow_run:
-    types: [completed]
   gollum:
   member:
     types: [added, edited, removed]
@@ -38,6 +35,7 @@ on:
   status:
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   notify:
