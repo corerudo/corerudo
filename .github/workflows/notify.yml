@@ -47,7 +47,6 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{
               "chat_id": "${{ secrets.NOTIFY_CHAT_ID }}",
-              "thread_id": "${{ secrets.NOTIFY_THREAD_ID }}",
               "repo": "${{ github.repository }}",
               "text": "🚀 *${{ github.event_name }}* in `${{ github.repository }}`\n\n${{ github.event.head_commit.message || github.event.issue.title || github.event.pull_request.title || github.event.release.name || github.event.discussion.title || github.event.ref || '' }}\n\n[View on GitHub](${{ github.event.head_commit.url || github.event.issue.html_url || github.event.pull_request.html_url || github.event.release.html_url || github.event.discussion.html_url || github.event.repository.html_url }})"
             }'
