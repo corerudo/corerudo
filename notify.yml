@@ -22,9 +22,6 @@ on:
   member:
     types: [added, edited, removed]
   public:
-  repository:
-    types: [created, deleted, archived, unarchived, publicized, privatized]
-  team_add:
   deployment:
     types: [created]
   deployment_status:
