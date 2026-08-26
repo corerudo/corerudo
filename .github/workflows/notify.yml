@@ -41,12 +41,149 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send notification
+      - name: Build message
+        id: build
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REPO: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
         run: |
+          EVENT_PATH="${GITHUB_EVENT_PATH:-}"
+          REPO_URL="https://github.com/${REPO}"
+
+          jqval() {
+            if [ -n "$EVENT_PATH" ] && [ -f "$EVENT_PATH" ]; then
+              jq -r "$1 // empty" "$EVENT_PATH"
+            fi
+          }
+
+          TITLE=""
+          LINK="$REPO_URL"
+
+          case "$EVENT_NAME" in
+            push)
+              TITLE=$(jqval '.head_commit.message')
+              LINK=$(jqval '.head_commit.url // .compare')
+              ;;
+            create|delete)
+              REF_TYPE=$(jqval '.ref_type')
+              REF=$(jqval '.ref')
+              TITLE="${REF_TYPE}: ${REF}"
+              ;;
+            fork)
+              TITLE=$(jqval '.forkee.full_name')
+              LINK=$(jqval '.forkee.html_url')
+              ;;
+            watch)
+              WHO=$(jqval '.sender.login')
+              TITLE="⭐ ${WHO} поставил звезду"
+              LINK=$(jqval '.sender.html_url')
+              ;;
+            public)
+              TITLE="Репозиторий стал публичным"
+              ;;
+            issues)
+              TITLE=$(jqval '.issue.title')
+              LINK=$(jqval '.issue.html_url')
+              ;;
+            pull_request)
+              TITLE=$(jqval '.pull_request.title')
+              LINK=$(jqval '.pull_request.html_url')
+              ;;
+            pull_request_review)
+              STATE=$(jqval '.review.state')
+              BODY=$(jqval '.review.body')
+              TITLE="${BODY:-Review: ${STATE}}"
+              LINK=$(jqval '.review.html_url')
+              ;;
+            release)
+              TITLE=$(jqval '.release.name // .release.tag_name')
+              LINK=$(jqval '.release.html_url')
+              ;;
+            registry_package)
+              TITLE=$(jqval '.registry_package.name')
+              LINK=$(jqval '.registry_package.package_version.html_url // .registry_package.html_url')
+              ;;
+            discussion)
+              TITLE=$(jqval '.discussion.title')
+              LINK=$(jqval '.discussion.html_url')
+              ;;
+            gollum)
+              TITLE=$(jqval '.pages[0].title // .pages[0].page_name')
+              LINK=$(jqval '.pages[0].html_url')
+              ;;
+            member)
+              WHO=$(jqval '.member.login')
+              ACTION=$(jqval '.action')
+              TITLE="${WHO}: ${ACTION}"
+              LINK=$(jqval '.member.html_url')
+              ;;
+            deployment)
+              TITLE=$(jqval '.deployment.description // .deployment.environment')
+              ;;
+            deployment_status)
+              TITLE=$(jqval '.deployment_status.description // .deployment_status.state')
+              LINK=$(jqval '.deployment_status.target_url')
+              ;;
+            page_build)
+              TITLE=$(jqval '.build.error.message // "Сборка GitHub Pages завершена"')
+              ;;
+            status)
+              TITLE=$(jqval '.description // .state')
+              LINK=$(jqval '.target_url')
+              ;;
+            project)
+              TITLE=$(jqval '.project.name')
+              LINK=$(jqval '.project.html_url')
+              ;;
+            project_card)
+              TITLE=$(jqval '.project_card.note // "Карточка обновлена"')
+              ;;
+            project_column)
+              TITLE=$(jqval '.project_column.name')
+              ;;
+            schedule)
+              TITLE="Ежедневная проверка"
+              ;;
+            workflow_dispatch)
+              TITLE="Запущено вручную (${ACTOR})"
+              ;;
+          esac
+
+          [ -z "$TITLE" ] && TITLE="$EVENT_NAME"
+          [ -z "$LINK" ] && LINK="$REPO_URL"
+
+          DELIM="EOF_$(openssl rand -hex 8)"
+          {
+            echo "title<<$DELIM"
+            echo "$TITLE"
+            echo "$DELIM"
+            echo "link<<$DELIM"
+            echo "$LINK"
+            echo "$DELIM"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send notification
+        env:
+          CHAT_ID: ${{ secrets.NOTIFY_CHAT_ID }}
+          REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          TITLE: ${{ steps.build.outputs.title }}
+          LINK: ${{ steps.build.outputs.link }}
+        run: |
+          TEXT=$(jq -n \
+            --arg event "$EVENT_NAME" \
+            --arg repo "$REPO" \
+            --arg title "$TITLE" \
+            --arg link "$LINK" \
+            -r '"🚀 *" + $event + "* in `" + $repo + "`\n\n" + $title + "\n\n[View on GitHub](" + $link + ")"')
+
+          PAYLOAD=$(jq -n \
+            --arg chat_id "$CHAT_ID" \
+            --arg repo "$REPO" \
+            --arg text "$TEXT" \
+            '{chat_id: $chat_id, repo: $repo, text: $text}')
+
           curl -X POST https://corerudo.larten.ru/webhook \
             -H "Content-Type: application/json" \
-            -d '{
-              "chat_id": "${{ secrets.NOTIFY_CHAT_ID }}",
-              "repo": "${{ github.repository }}",
-              "text": "🚀 *${{ github.event_name }}* in `${{ github.repository }}`\n\n${{ github.event.head_commit.message || github.event.issue.title || github.event.pull_request.title || github.event.release.name || github.event.discussion.title || github.event.ref || '' }}\n\n[View on GitHub](${{ github.event.head_commit.url || github.event.issue.html_url || github.event.pull_request.html_url || github.event.release.html_url || github.event.discussion.html_url || github.event.repository.html_url }})"
-            }'
+            -d "$PAYLOAD"
